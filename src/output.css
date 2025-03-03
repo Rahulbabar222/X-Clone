@@ -239,6 +239,9 @@
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
+  .h-7 {
+    height: calc(var(--spacing) * 7);
+  }
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
@@ -262,6 +265,9 @@
   }
   .h-screen {
     height: 100vh;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
@@ -290,6 +296,12 @@
   .w-20 {
     width: calc(var(--spacing) * 20);
   }
+  .w-50 {
+    width: calc(var(--spacing) * 50);
+  }
+  .w-55 {
+    width: calc(var(--spacing) * 55);
+  }
   .w-60 {
     width: calc(var(--spacing) * 60);
   }
@@ -302,8 +314,14 @@
   .max-w-10 {
     max-width: calc(var(--spacing) * 10);
   }
+  .max-w-50 {
+    max-width: calc(var(--spacing) * 50);
+  }
   .max-w-90 {
     max-width: calc(var(--spacing) * 90);
+  }
+  .max-w-full {
+    max-width: 100%;
   }
   .min-w-8 {
     min-width: calc(var(--spacing) * 8);
@@ -346,6 +364,20 @@
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+  .space-x-0 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 0) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 0) * calc(1 - var(--tw-space-x-reverse)));
+    }
+  }
+  .space-x-5 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 5) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-x-reverse)));
+    }
   }
   .space-x-40 {
     :where(& > :not(:last-child)) {
@@ -454,8 +486,17 @@
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
   }
+  .pt-5 {
+    padding-top: calc(var(--spacing) * 5);
+  }
+  .pb-3 {
+    padding-bottom: calc(var(--spacing) * 3);
+  }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
+  }
+  .pl-0 {
+    padding-left: calc(var(--spacing) * 0);
   }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
@@ -632,9 +673,41 @@
       width: fit-content;
     }
   }
+  .sm\:w-full {
+    @media (width >= 40rem) {
+      width: 100%;
+    }
+  }
   .sm\:max-w-148 {
     @media (width >= 40rem) {
       max-width: calc(var(--spacing) * 148);
+    }
+  }
+  .sm\:space-x-40 {
+    @media (width >= 40rem) {
+      :where(& > :not(:last-child)) {
+        --tw-space-x-reverse: 0;
+        margin-inline-start: calc(calc(var(--spacing) * 40) * var(--tw-space-x-reverse));
+        margin-inline-end: calc(calc(var(--spacing) * 40) * calc(1 - var(--tw-space-x-reverse)));
+      }
+    }
+  }
+  .sm\:space-x-50 {
+    @media (width >= 40rem) {
+      :where(& > :not(:last-child)) {
+        --tw-space-x-reverse: 0;
+        margin-inline-start: calc(calc(var(--spacing) * 50) * var(--tw-space-x-reverse));
+        margin-inline-end: calc(calc(var(--spacing) * 50) * calc(1 - var(--tw-space-x-reverse)));
+      }
+    }
+  }
+  .sm\:space-x-60 {
+    @media (width >= 40rem) {
+      :where(& > :not(:last-child)) {
+        --tw-space-x-reverse: 0;
+        margin-inline-start: calc(calc(var(--spacing) * 60) * var(--tw-space-x-reverse));
+        margin-inline-end: calc(calc(var(--spacing) * 60) * calc(1 - var(--tw-space-x-reverse)));
+      }
     }
   }
   .sm\:p-3 {
@@ -647,9 +720,19 @@
       padding-inline: calc(var(--spacing) * 3);
     }
   }
+  .sm\:py-3 {
+    @media (width >= 40rem) {
+      padding-block: calc(var(--spacing) * 3);
+    }
+  }
   .sm\:pr-8 {
     @media (width >= 40rem) {
       padding-right: calc(var(--spacing) * 8);
+    }
+  }
+  .sm\:pl-2 {
+    @media (width >= 40rem) {
+      padding-left: calc(var(--spacing) * 2);
     }
   }
   .lg\:block {
@@ -679,6 +762,26 @@
   }
   .\[\@media\(max-height\:730px\)\]\:hidden {
     @media (max-height:730px) {
+      display: none;
+    }
+  }
+  .\[\@media\(max-width\:400px\)\]\:hidden {
+    @media (max-width:400px) {
+      display: none;
+    }
+  }
+  .\[\@media\(max-width\:450px\)\]\:hidden {
+    @media (max-width:450px) {
+      display: none;
+    }
+  }
+  .\[\@media\(max-width\:45px\)\]\:hidden {
+    @media (max-width:45px) {
+      display: none;
+    }
+  }
+  .\[\@media\(max-width\:730px\)\]\:hidden {
+    @media (max-width:730px) {
       display: none;
     }
   }
