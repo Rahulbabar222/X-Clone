@@ -39,16 +39,6 @@ async function main() {
         inactiveDiv.style.backgroundColor = "transparent";
     }
 
-
-    
-
-
-
-
-
-
-
-
 }
 
 main();
