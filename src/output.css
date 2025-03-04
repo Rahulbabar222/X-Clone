@@ -6,7 +6,11 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-100: oklch(0.962 0.059 95.617);
+    --color-amber-200: oklch(0.924 0.12 95.746);
     --color-blue-400: oklch(0.707 0.165 254.624);
+    --color-zinc-200: oklch(0.92 0.004 286.32);
+    --color-zinc-300: oklch(0.871 0.006 286.286);
     --color-zinc-400: oklch(0.705 0.015 286.067);
     --color-zinc-800: oklch(0.274 0.006 286.033);
     --color-black: #000;
@@ -23,6 +27,7 @@
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --radius-2xl: 1rem;
+    --blur-md: 12px;
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
     --default-font-variation-settings: var(
@@ -191,6 +196,12 @@
   .z-10 {
     z-index: 10;
   }
+  .m-1 {
+    margin: calc(var(--spacing) * 1);
+  }
+  .m-2 {
+    margin: calc(var(--spacing) * 2);
+  }
   .m-9 {
     margin: calc(var(--spacing) * 9);
   }
@@ -329,6 +340,9 @@
   .min-w-10 {
     min-width: calc(var(--spacing) * 10);
   }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .cursor-text {
     cursor: text;
   }
@@ -423,14 +437,35 @@
   .border-b-\[\#313233\] {
     border-bottom-color: #313233;
   }
+  .bg-\[\#1a89d2\] {
+    background-color: #1a89d2;
+  }
+  .bg-\[\#1c8fdc\] {
+    background-color: #1c8fdc;
+  }
+  .bg-\[\#1c87cf\] {
+    background-color: #1c87cf;
+  }
+  .bg-\[\#1d80c3\] {
+    background-color: #1d80c3;
+  }
   .bg-\[\#1e9cf2\] {
     background-color: #1e9cf2;
   }
   .bg-\[\#787a7a\] {
     background-color: #787a7a;
   }
+  .bg-amber-100 {
+    background-color: var(--color-amber-100);
+  }
+  .bg-amber-200 {
+    background-color: var(--color-amber-200);
+  }
   .bg-black {
     background-color: var(--color-black);
+  }
+  .bg-black\/50 {
+    background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
   }
   .bg-black\/70 {
     background-color: color-mix(in oklab, var(--color-black) 70%, transparent);
@@ -559,6 +594,11 @@
       color: #787a7a;
     }
   }
+  .backdrop-blur-md {
+    --tw-backdrop-blur: blur(var(--blur-md));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
   .group-hover\:fill-\[\#00b77a\] {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -592,6 +632,55 @@
       line-height: var(--tw-leading, var(--text-sm--line-height));
     }
   }
+  .hover\:bg-\[\#1a89d2\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #1a89d2;
+      }
+    }
+  }
+  .hover\:bg-\[\#1d9bf0\/7\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #1d9bf0/7;
+      }
+    }
+  }
+  .hover\:bg-\[\#1d9bf0\/50\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #1d9bf0/50;
+      }
+    }
+  }
+  .hover\:bg-\[\#1d9bf0\/\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #1d9bf0/;
+      }
+    }
+  }
+  .hover\:bg-\[\#1d9bf0\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #1d9bf0;
+      }
+    }
+  }
+  .hover\:bg-\[\#1e9cf2\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #1e9cf2;
+      }
+    }
+  }
+  .hover\:bg-\[\#4a718b\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #4a718b;
+      }
+    }
+  }
   .hover\:bg-\[\#131415\] {
     &:hover {
       @media (hover: hover) {
@@ -603,6 +692,76 @@
     &:hover {
       @media (hover: hover) {
         background-color: #e7e9ea1a;
+      }
+    }
+  }
+  .hover\:bg-\[rgb\(29\,155\,240\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgb(29,155,240);
+      }
+    }
+  }
+  .hover\:bg-\[rgb\(29\,155\,240\,\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgb(29,155,240,);
+      }
+    }
+  }
+  .hover\:bg-\[rgb\(29\,155\,240\,0\.\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgb(29,155,240,0.);
+      }
+    }
+  }
+  .hover\:bg-\[rgb\(29\,155\,240\,0\.1\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgb(29,155,240,0.1);
+      }
+    }
+  }
+  .hover\:bg-\[rgb\(29\,155\,240\,0\.2\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgb(29,155,240,0.2);
+      }
+    }
+  }
+  .hover\:bg-\[rgb\(29\,155\,240\,0\.3\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgb(29,155,240,0.3);
+      }
+    }
+  }
+  .hover\:bg-\[rgb\(29\,155\,240\,0\.5\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgb(29,155,240,0.5);
+      }
+    }
+  }
+  .hover\:bg-zinc-200 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-zinc-200);
+      }
+    }
+  }
+  .hover\:bg-zinc-300 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-zinc-300);
+      }
+    }
+  }
+  .hover\:bg-zinc-400 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-zinc-400);
       }
     }
   }
@@ -710,9 +869,24 @@
       }
     }
   }
+  .sm\:p-2 {
+    @media (width >= 40rem) {
+      padding: calc(var(--spacing) * 2);
+    }
+  }
   .sm\:p-3 {
     @media (width >= 40rem) {
       padding: calc(var(--spacing) * 3);
+    }
+  }
+  .sm\:px-1 {
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 1);
+    }
+  }
+  .sm\:px-2 {
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 2);
     }
   }
   .sm\:px-3 {
@@ -797,6 +971,42 @@
   initial-value: solid;
 }
 @property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
   syntax: "*";
   inherits: false;
 }
