@@ -28,11 +28,20 @@ JavaScript -For few interactive elements.
 
 ## 📂 Folder Structure
 ````
-/ project-root
-  ├── index.html          # Main HTML file
-  ├── styles/             # Tailwind CSS configuration
-  ├── assets/             # Images, icons, etc.
-  ├── README.md           # Project documentation
+/ x-clone
+  ├── index.html         # Main HTML file
+  ├── src/              # Tailwind CSS configuration
+  │   ├── input.css     # Tailwind directives
+  │   ├── output.css    # Compiled Tailwind CSS
+  ├── public/           # Public assets
+  │   ├── js/           
+  │   │   ├── script.js # Main JS file
+  ├── assets/           # Images, icons, fonts, etc.
+  ├── .gitignore        # Git ignore file
+  ├── package.json      # Project dependencies
+  ├── package-lock.json # Lock file for npm packages
+  ├── README.md         # Project documentation
+
 ````
 
 ## 🏗️ Setup & Installation
